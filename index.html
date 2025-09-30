@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Julia Lauryn Art</title>
+  <meta name="description" content="Watercolor florals, animals & sweet patterns by Julia Lauryn." />
+  <meta property="og:title" content="Julia Lauryn Art" />
+  <meta property="og:description" content="Watercolor florals, animals & sweet patterns by Julia Lauryn." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/cover.jpg" />
+  <link rel="icon" type="image/png" href="images/cherry-pattern.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Yeseva+One&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#fff7fb;
+      --ink:#3f2e3b;
+      --muted:#7b6d78;
+      --accent:#ec77a8;
+      --card:#ffffff;
+      --chip-bg:#fdf3f7;
+      --chip-border:#f5cfdf;
+    }
+    *{box-sizing:border-box;}
+    html,body{margin:0;padding:0;background:linear-gradient(180deg,#fff7fb 0%,#fffef9 100%);color:var(--ink);font:16px/1.65 "Quicksand", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;}
+    .wrap{max-width:1100px;margin:0 auto;padding:24px;}
+    a{color:var(--accent);text-decoration:none;} a:hover{text-decoration:underline;}
+    header{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center;padding:14px 0 6px;position:sticky;top:0;background:linear-gradient(var(--bg),color-mix(in srgb,var(--bg) 88%, transparent));backdrop-filter:blur(6px);z-index:10;}
+    .brand{font-family:"Parisienne",cursive;font-size:clamp(28px,4vw,44px);font-weight:400;letter-spacing:.3px;}
+    nav{display:flex;gap:12px;font-weight:700;}
+    nav a{padding:8px 10px;border-radius:12px;}
+    nav a.active,nav a:hover{background:var(--card);box-shadow:0 1px 2px rgba(0,0,0,.06);}
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;margin-top:18px;}
+    h1{font-family:"Yeseva One",serif;font-size:clamp(30px,5vw,52px);margin:0 0 10px;line-height:1.06;}
+    .hero p{margin:0 0 16px;color:var(--muted);}
+    .cta{display:inline-block;padding:12px 18px;border-radius:14px;background:var(--accent);color:#fff;font-weight:700;box-shadow:0 8px 18px rgba(236,119,168,.25);} .cta.secondary{background:#fff;color:var(--accent);border:1px solid color-mix(in srgb,var(--accent) 25%, transparent);box-shadow:none;}
+    .hero img{width:100%;border-radius:18px;display:block;box-shadow:0 10px 28px rgba(0,0,0,.08);}
+    .section-title{margin:44px 0 14px;font-family:"Yeseva One",serif;font-size:clamp(22px,3.5vw,32px);}
+    .filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:14px;}
+    .chip{padding:6px 12px;background:var(--chip-bg);border:1px solid var(--chip-border);border-radius:999px;font-size:14px;cursor:pointer;}
+    .chip.active{background:var(--accent);border-color:var(--accent);color:#fff;}
+    .grid{column-count:3;column-gap:14px;}
+    .card{break-inside:avoid;display:block;background:var(--card);border-radius:18px;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,.06);border:1px solid #f6dfe8;margin:0 0 14px;transition:transform .12s;}
+    .card:hover{transform:translateY(-2px);}
+    .card img{width:100%;height:auto;display:block;object-fit:cover;}
+    .meta{padding:12px 14px 16px;}
+    .title{font-weight:700;}
+    .tags{font-size:13px;color:var(--muted);}
+    .about{display:grid;grid-template-columns:.7fr 1.3fr;gap:20px;align-items:center;}
+    .about img{width:100%;border-radius:20px;box-shadow:0 10px 26px rgba(0,0,0,.08);}
+    @media (max-width:980px){.hero{grid-template-columns:1fr}.grid{column-count:2}.about{grid-template-columns:1fr}}
+    @media (max-width:640px){.grid{column-count:1}.wrap{padding:16px}header{grid-template-columns:1fr;gap:10px}nav{flex-wrap:wrap}}
+    dialog{padding:0;border:0;border-radius:16px;box-shadow:0 30px 60px rgba(0,0,0,.35);max-width:min(96vw,1100px)}
+    .lightbox img{width:100%;display:block}
+    .lightbox .cap{display:flex;justify-content:space-between;align-items:center;padding:10px 12px;background:var(--card);border-top:1px solid #eee}
+    .iconbtn{background:transparent;border:0;font-size:22px;cursor:pointer;padding:4px 6px}
+    footer{padding:40px 0 20px;color:var(--muted);font-size:14px}
+    .social{display:flex;gap:14px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">Julia Lauryn Art</div>
+      <nav>
+        <a href="#gallery" class="active">Gallery</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="#shop">Shop</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <h1>Whimsical florals, sweet critters & cozy patterns.</h1>
+        <p>Watercolor and mixed‑media pieces full of color and charm. Browse the gallery and reach out for originals, prints, or commissions.</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <a class="cta" href="#gallery">View gallery</a>
+          <a class="cta secondary" href="#contact">Commission inquiry</a>
+        </div>
+      </div>
+      <img src="images/cover.jpg" alt="Collage of watercolor florals by Julia Lauryn">
+    </section>
+
+    <h2 id="gallery" class="section-title">Gallery</h2>
+    <div class="filters" id="filters">
+      <button class="chip active" data-filter="all">All</button>
+      <button class="chip" data-filter="animals">Animals</button>
+      <button class="chip" data-filter="florals">Florals</button>
+      <button class="chip" data-filter="patterns">Patterns</button>
+      <button class="chip" data-filter="fantasy">Fantasy</button>
+    </div>
+
+    <div class="grid" id="grid">
+      <figure class="card" data-tags="animals fantasy">
+        <img src="images/ocean-jewel.jpg" alt="Ocean Jewel — purple and gold crab illustration" loading="lazy">
+        <figcaption class="meta">
+          <div class="title">Ocean Jewel</div>
+          <div class="tags">Animals · Watercolor</div>
+        </figcaption>
+      </figure>
+
+      <figure class="card" data-tags="animals fantasy florals">
+        <img src="images/petal-queen.jpg" alt="Petal Queen — hummingbird with floral halo" loading="lazy">
+        <figcaption class="meta">
+          <div class="title">Petal Queen</div>
+          <div class="tags">Animals · Fantasy</div>
+        </figcaption>
+      </figure>
+
+      <figure class="card" data-tags="animals fantasy">
+        <img src="images/seeds-of-life.jpg" alt="Seeds of Life — bee with swirling floral motifs" loading="lazy">
+        <figcaption class="meta">
+          <div class="title">Seeds of Life</div>
+          <div class="tags">Animals · Watercolor</div>
+        </figcaption>
+      </figure>
+
+      <figure class="card" data-tags="patterns florals">
+        <img src="images/blueberries-pattern.jpg" alt="Blueberries pattern" loading="lazy">
+        <figcaption class="meta">
+          <div class="title">Blueberries Pattern</div>
+          <div class="tags">Patterns · Surface design</div>
+        </figcaption>
+      </figure>
+
+      <figure class="card" data-tags="patterns florals">
+        <img src="images/buttercup-burst.jpg" alt="Buttercup Burst pattern" loading="lazy">
+        <figcaption class="meta">
+          <div class="title">Buttercup Burst</div>
+          <div class="tags">Patterns · Surface design</div>
+        </figcaption>
+      </figure>
+
+      <figure class="card" data-tags="patterns florals">
+        <img src="images/cherry-pattern.jpg" alt="Cherry pattern" loading="lazy">
+        <figcaption class="meta">
+          <div class="title">Cherry Pattern</div>
+          <div class="tags">Patterns · Surface design</div>
+        </figcaption>
+      </figure>
+    </div>
+
+    <h2 id="about" class="section-title">About</h2>
+    <div class="about">
+      <img src="images/julia-portrait.jpg" alt="Julia Lauryn holding small watercolor prints">
+      <p>Hi, I’m Julia — a watercolor artist who loves florals, tiny creatures, and gentle fantasy. I paint in bright, cozy palettes and also design playful surface patterns. For originals, prints, or commissions, say hi below ♡</p>
+    </div>
+
+    <h2 id="shop" class="section-title">Shop</h2>
+    <p>No subscriptions needed. When you’re ready, add a <strong>Stripe Payment Link</strong> or a <strong>Gumroad</strong> URL to the button below.</p>
+    <p>
+      <a class="cta" href="#" id="buyLink">Buy a print set</a>
+      <span style="margin-left:8px;color:var(--muted);font-size:14px">(replace the link with your Stripe or Gumroad URL)</span>
+    </p>
+
+    <h2 id="contact" class="section-title">Contact</h2>
+    <p>For commissions or licensing, email <a href="mailto:hello@julialaurynart.com">hello@julialaurynart.com</a> or DM on Instagram.</p>
+
+    <footer>
+      <div class="social">
+        <a href="https://instagram.com/" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="Newsletter">Newsletter</a>
+        <a href="#" aria-label="Etsy">Etsy</a>
+      </div>
+      <p>© <span id="year"></span> Julia Lauryn. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <dialog id="lightbox">
+    <div class="lightbox">
+      <img id="lightImg" alt="Artwork">
+      <div class="cap">
+        <p id="lightCap">Title</p>
+        <button class="iconbtn" id="closeBtn" aria-label="Close">✕</button>
+      </div>
+    </div>
+  </dialog>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const chips = document.querySelectorAll('.chip'); const cards = document.querySelectorAll('.card');
+    chips.forEach(ch => ch.addEventListener('click', () => {
+      chips.forEach(c => c.classList.remove('active')); ch.classList.add('active');
+      const f = ch.dataset.filter; cards.forEach(card => { const show = f === 'all' || card.dataset.tags.includes(f); card.style.display = show ? '' : 'none'; });
+    }));
+    const dlg = document.getElementById('lightbox'); const lightImg = document.getElementById('lightImg'); const lightCap = document.getElementById('lightCap'); const closeBtn = document.getElementById('closeBtn');
+    document.getElementById('grid').addEventListener('click', e => { const fig = e.target.closest('.card'); if (!fig) return; const img = fig.querySelector('img'); lightImg.src = img.src; lightImg.alt = img.alt; lightCap.textContent = fig.querySelector('.title').textContent; dlg.showModal(); });
+    closeBtn.addEventListener('click', () => dlg.close()); dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
+    document.getElementById('buyLink').href = '#';
+  </script>
+</body>
+</html>
